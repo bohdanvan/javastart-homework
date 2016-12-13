@@ -91,22 +91,27 @@ public class Args {
 
     public static int notNegative(int n, String name) {
         if (n < 0) {
-            throw new IllegalArgumentException(name + " may not be negative");
+            throw new IllegalArgumentException(name + " may not be negative: " + n);
         }
         return n;
     }
 
     public static long notNegative(long n, String name) {
         if (n < 0) {
-            throw new IllegalArgumentException(name + " may not be negative");
+            throw new IllegalArgumentException(name + " may not be negative: " + n);
         }
         return n;
     }
 
     public static int checkSize(int size) {
-        if (size < 0) {
-            throw new IllegalArgumentException("negative size: " + size);
-        }
-        return size;
+        return notNegative(size, "size");
+    }
+
+    public static int checkRows(int rows) {
+        return notNegative(rows, "number of rows");
+    }
+
+    public static int checkCols(int cols) {
+        return notNegative(cols, "number of cols");
     }
 }
