@@ -1,6 +1,7 @@
 package com.bvan.javastart.hw.stars2;
 
 import com.bvan.common.Args;
+import com.bvan.common.Printer;
 
 /**
  * @author bvanchuhov
@@ -17,17 +18,17 @@ public class SpiralCreator {
     public static void main(String[] args) {
         System.out.println("rows = 3, cols = 3:");
         int[][] spiral1 = createSpiral(3, 3);
-        MatrixPrinter.printMatrix(spiral1);
+        Printer.printMatrix(spiral1);
         System.out.println("-------------------");
 
         System.out.println("rows = 2, cols = 4:");
         int[][] spiral2 = createSpiral(2, 4);
-        MatrixPrinter.printMatrix(spiral2);
+        Printer.printMatrix(spiral2);
         System.out.println("-------------------");
 
         System.out.println("rows = 10, cols = 20:");
         int[][] spiral3 = createSpiral(10, 20);
-        MatrixPrinter.printMatrix(spiral3);
+        Printer.printMatrix(spiral3);
         System.out.println("-------------------");
 
 //        System.out.println("size = 1:");
